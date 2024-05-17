@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let str="iam ANANDU RAVEENDRAN coming from thodupuzha."
+        let b="currently persuing blockchain architect course from kba"
+        console.log(str)
+        console.log(str=str.toLowerCase())
+        console.log(str=str.toUpperCase())
+        console.log(str=str.concat(" ","mca graduate."," ",b))
+        document.getElementById("demo").innerHTML="length of the string - "+str+ " is - "+ str.at(2);
+        console.log(str,"sliced = ",str.slice(4,10))
+        console.log("\n",str,"sliced = ",str.slice(50))
+        console.log(str.replace(/graduate/g,"dropout"))
+        console.log(str.indexOf("graduate"))
+        console.log(str.split(" "))
+        let x="14"
+        let y="16"
+        let z=Number.parseInt(x)+Number.parseInt(y)
+        console.log(z)
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+</head>
+
+<body>
+    <h1>bitwise operators</h1>
+    <!-- <p id="demo">demo</p> -->
+    <p></p>
+    <script>
+        {
+            let a = 5;
+            let b = '5';
+
+            c = (a == b)
+            console.log("double eql of string and int- "+c)
+        }
+        {
+            let a = 7;
+            let b = 4;
+
+            a+=b;
+            console.log("plus eql - "+a)
+            a-=b;
+            console.log("minus eql - "+a)
+            a/=b;
+            console.log("substract eql - "+a)
+
+            a*=b;
+            console.log("multiplication eql - "+a)
+
+            a%=b;
+            console.log("modulo eql - "+a)
+            a=6;
+            
+            c=0
+            console.log(c)
+            c=a>>1;
+            console.log("right shift - "+c)
+            a=5;
+           
+            c=a<<1;
+            console.log("left shift - "+c)
+            a=5;
+           
+            c=a>>>1;
+            console.log("unsigned right shift - "+c)
+            c=a
+            ++a
+            console.log("increment - "+a,c)
+            c=a++
+            console.log("post increment - "+c,a)
+            c=++a
+            console.log("pre increment - "+c,a)
+
+            let age=25;
+            let d=(age>18)?"eligible to vote":"not eligible to vote";
+            console.log(d)
+            c= ~a;
+            console.log(c)
+            
+
+        }
+ 
+
+    </script>
+</body>
+
+</html>
