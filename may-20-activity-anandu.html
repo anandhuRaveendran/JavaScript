@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+
+<body>
+    <h1> Array Activity </h1>
+    <script>{
+            let fruits = ['apple', 'orange', 'banana', 'pineapple', 'mango']
+            document.write("Array => ", fruits, "<br>")
+            document.write("Sorted array => ", fruits.sort(), "<br>")
+            fruits = fruits.reverse()
+            document.write("Sorted and Reverse of an array => ", fruits, "<br>")
+        }
+        {
+            let a = "Hello World";
+            let b = "hEllo World";
+            let c = a == b;
+            document.write(a, " == ", b, " => condition is ", c, " and type is => ", typeof c, "<br>")
+            c = a === b;
+            document.write(a, " === ", b, " => condition is ", c, " and type is => ", typeof c, "<br>")
+        }
+        {
+            let age = 30;
+            let b_age = 10;
+            brother = age + b_age;
+            document.write("I am ", age, "yrs of old and my brother is 10 yrs older to me. He is now ", brother, " years old. <br>")
+
+        }
+        {
+            let fname = "Anandu";
+            let lname = "Raveendran";
+            let str = fname + " " + lname;
+            str = str.toUpperCase()
+            let location = "Thodupuzha"
+            document.write("My Name is ", str, ". I live in ", location.toUpperCase(), "<br>")
+        }
+        {
+            str = "javascript.js"
+            newstr = str.slice(0,-3)
+            document.write("string is => ", str, " | sliced the  \".js\" =>", newstr, "<br>")
+        }
+        function multiplic(x, y) {
+            document.write(x, "*", y, "<br>")
+            let m = x * y;
+            document.write("total is = ", m, "<br>")
+
+        }
+
+        let x = 34;
+        let y = 63;
+        multiplic(x, y)
+
+        function mult(k, l, n) {
+            document.write(k, "*", l, "*", n, "<br>")
+            let m = k * l * n;
+            document.write("total is = ", m,"<br>")
+
+        }
+        let k = 3;
+        let l = 63;
+        let n = 10;
+        mult(k, l, n)
+        function sum(a,b) {
+            document.write(a, "+", b,"<br>")
+            let m = a +b;
+            document.write("sum is = ", m, "<br>")
+            return m;
+        }
+        let a=20;
+        let b=30;
+        let total=sum(a,b)*2
+        document.write("total= ",total)
+    </script>
+</body>
+
+</html>
