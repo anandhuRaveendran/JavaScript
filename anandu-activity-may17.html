@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+<body>
+    <h1>Activity may 17</h1>
+    <p id="sum" style="font-size: large;"></p>
+    <script>
+        {
+        let a=3.5;
+        let b=2.4;
+        let sum=a+b;
+        document.getElementById("sum").innerHTML="Sum of 2 numbers is = "+sum + " And the type of sun is - "+typeof sum;  
+        }
+     {
+        let a=104.5;
+        let b=5
+        let sub=a/b;4.5*2
+        document.write("substitution of ",a," and ",b," is = ",sub," and the type of sub is - ",typeof sub,"<br><br>");
+     }
+     {
+        let a=4.5;
+        let b=2
+        let mult=a*b;
+        document.write("multiplication of ",a," and ",b," is = ",mult," and the type of sub is - ",typeof mult);
+     }
+     {
+        let x=5;
+        document.write("type of x when x=5 - ",typeof x,"<br><br>" ) 
+        x=3.5;
+        document.write("type of x when x=3.5 - ",typeof x,"<br><br>") 
+        x="a";
+        document.write("type of x when x=\"a\" - ",typeof x,"<br><br>")
+        x="hello";
+         document.write("type of x when x=\"hello\" - ",typeof x,"<br><br>")
+        x=null;
+          document.write("type of x when x=null - ",typeof x,"<br><br>")
+        let y;
+        document.write("type of y when y - ",typeof y,"<br><br>")
+     }
+     {
+        let fname="Anandu"
+        let lname="Raveendran"
+        let fullname = fname+" "+lname
+        document.write(fullname , "<br><br>")
+     }
+     {
+        let str="MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation."
+        let newstr=str.replace(/MongoDB/g,"Blockchain")
+        document.write("string is =>",str,"<br><br>","replaced MongoDB with Blockchain => ",newstr,"<br><br>")
+
+     }
+     {
+        document.write("<h1> MOVIES </h1>")
+        let movies=['Avesham','Varshangalk shesham','Turbo','Aadujeevitham','Puzhu','Bramayugam','Godzilla -1','Kong','Mavericks','Free Fall','Classmates','Midsommar']
+        document.write(movies,"<br><br>")
+        let mostfm=movies.slice(2,5)
+        document.write("Most Favourite Movies are => ",mostfm,"<br><br>")
+        movies.push('Jailer')
+        document.write("New Movie added => ",movies,"<br><br>")
+        movies.pop()
+        document.write("popped 1 movie from the latest list => ",movies,"<br><br>")
+        delete(movies[1])
+        document.write("Deleted movie index is 1 => ",movies,"<br><br>")
+        let newarray=movies.slice(2,6)
+        document.write("3rd to 6th position list => ",newarray,"<br><br>")
+        document.write("position of favourite actor => ",movies.indexOf("Puzhu"))
+
+
+     }
+    </script>
+</body>
+</html>

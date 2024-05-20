@@ -9,7 +9,21 @@
     <h1>Arrays</h1>
     <script>
         let fruits=['apple','orange','banana','pineapple']
-        console.log(typeof fruits)
+        console.log(Array.isArray(fruits),fruits) //checking the array type and printing the array
+        console.log(fruits.length)//array length
+        fruits[4]='mango'
+        console.log(fruits)//print element in an array
+        fruits.push('Grapes')
+        console.log(fruits)//print element in an array
+        let popped=fruits.pop()
+        console.log(fruits ,"removed fruit is- ",popped)//print element in an array
+        delete(fruits[2])
+        console.log(fruits,fruits[2])
+       
+        console.log( fruits.slice(1,4))//print element in an array
+        console.log(fruits.indexOf('pineapple')+1)
+
+
     </script>
 </body>
 </html>
