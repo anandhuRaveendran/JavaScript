@@ -5,25 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="funct.js"></script>
+
 </head>
 
 <body>
-    <script>
-        function sum(x, y) {
-            console.log(x, "+", y)
-            let s = x + y;
-            console.log("sum is = ", s)
-            return s;
-        }
-        function mutli(d) {
-            console.log(d,"*",2)
-            res=d*2;
-            console.log("multiplied =>",res)
-        }
-        let a=5;
+    <script>//sum
+        // function sum(x, y) {
+        //     console.log(x, "+", y)
+        //     let s = x + y;
+        //     console.log("sum is = ", s)
+        //     return s;
+        // }//multiplication
+        // function mutli(d) {
+        //     console.log(d,"*",2)
+        //     res=d*2;
+        //     console.log("multiplied =>",res)
+        // }
+        let a=7;
         let b=6;
         mutli(sum(a,b))
-    </script>
+        //area of a square
+        function square(a){
+            document.write("Area of a square = ",a*a)
+           
+        }
+        //perimeter of a square
+        function perimsquare(a){
+            document.write("perimeter of a sqaure = ",psquare=4*a)
+        }
+        a=20;
+        perimsquare(a)
+        let l=14;
+        square(l)
+        //area of a rectangle
+        function rect(l,b){
+            document.write("area of a rectangle=",l*b)
+        }
+        let len=20;
+        let bred=30;
+        rect(len,bred)
+        //perimeter of a rectangle
+        function pmtr(l,b){
+            document.write("perimeter of a rectangle= ",(l+b)*2)
+        }
+        pmtr(l,b)
+        const pi=3.14;
+        //area of a circle
+        function circ(r){
+            document.write("area of acircle = ",area=pi*r**2)
+        }
+        let r=36;
+        circ(r)
+        //perimeter of a circle
+        function pericercle(r){
+            document.write("perimeter of acircle = ",perim=2*pi*r)
+        }
+        pericercle(r)
+
+    </script>Enter your First Name
+    <input id="text1" >
+    Enter your Second Name:
+    <input id="text2" >
+    <br>
+    <button type="button" onclick="textc()">onclick</button>
+    
+    <p id="demo"></p>
+
 </body>
 
 </html>
