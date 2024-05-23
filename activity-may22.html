@@ -9,22 +9,85 @@
 
 </head>
 
-<body>
-    <script>
-        let person = {
-            fname: "Anandu",
-            lname: "Raveendfran",
-            place: "Karyavattom"
+<body><br>
+    <p>Personal details</p>
+    Name: <span id="sname"></span><br>
+    Class: <span id="sclass"></span><br>
+    Age: <span id="sage"></span><br>
+    Adress: <span id="sadress"></span><br>
+
+    <script>    
+        let student = {
+            name: "Anandu Raveendran",
+
+
+            age: "24",
+            class: "12th",
+            Adress: "Karikkanamparayil(H) Arakulam(PO) Arakulam"
         }
-        document.write("Name of the person: ", person.fname, "<br>")
+        document.write("Name : ", student.name, "<br>")
+        let fruits = ['apple', 'orange', 'banana', 'pineapple', 'mango'];
+        function fruitsel() {
+            console.log("here")
+            document.getElementById("fr").innerHTML = fruits[document.getElementById("fruit").value - 1]
+
+
+        }
+        document.getElementById("sname").innerHTML = student.name;
+        document.getElementById("sclass").innerHTML = student.class
+        document.getElementById("sage").innerHTML = student.age
+        document.getElementById("sadress").innerHTML = student.Adress
+
     </script>
     <input type="number" id="fno" placeholder="Enter the first Number"><br>
     <input type="number" id="sno" placeholder="Enter the Second Number"><br>
     <button onclick="addition()">Submit</button><br>
     sum is =
     <span id="Addition"></span><br>
-    Multi = 
-    <span id="mult"></span>
+    Multi =
+    <span id="mult"></span><br>
+    <input id="name1" placeholder="enter the first number">
+    <input id="name2" placeholder="enter the second number"><br>
+    <button onclick="swap()">click here</button><br>
+
+    swapped first number:<span id="swapped1"></span><br>
+    swapped 2nd number:<span id="swapped2"></span><br>
+    <input id="squaren" placeholder="enter the number"><br>
+    <button onclick="square()">click here</button><br>
+    square of a number:<span id="squared"></span><br>
+    <input id="cuben" placeholder="enter the number"><br>
+    <button onclick="cube()">click here</button><br>
+    cube of a number:<span id="cube"></span><br>
+    <input id="princ" placeholder="enter the prinicpal amount"><br>
+    <input id="rate" placeholder="enter the rate"><br>
+    <input id="time" placeholder="enter the time span"><br>
+
+
+    <button onclick="interest()">Compound interest</button><br>
+    <span id="cmpi"></span><br>
+
+    <button onclick="sinterest()">Simple interest</button><br>
+    <span id="smpi"></span><br>
+    <label>Select index for the fruit</label>
+    <select name="fruits" id="fruit" onchange="fruitsel()" style="width: 200px;">
+        <option value="1">1</option>
+        <option value="2">2</option>
+
+        <option value="3">3</option>
+
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+
+
+    </select>
+    <P id="fr"></P><br>
+
+
+
+
+
+
 </body>
 
 </html>

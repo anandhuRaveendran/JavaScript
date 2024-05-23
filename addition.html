@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=()=>{
+    let a=document.getElementById("value1").value;
+    let b=document.getElementById("value2").value;
+    Number.parseInt(a)+Number.parseInt(b)
+    document.getElementById("Addition").innerHTML=sum
+}
+    </script>
+     <input type="number" id="fno" placeholder="Enter the first Number"><br>
+     <input type="number" id="sno" placeholder="Enter the Second Number"><br>
+     <button onclick="sum()">Submit</button><br>
+     sum is =
+     <span id="Addition"></span><br>
+</body>
+</html>
