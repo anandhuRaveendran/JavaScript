@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statements</title>
+</head>
+
+<body>
+    <h3>statements</h3>
+    <script>
+        let x = 6;
+        let y = 9;
+        let str = "anandu"
+        function greater(x, y) {
+            if (x > y) {
+                document.write("largest is => x ", x)
+            }
+
+            else if (x == y) {
+                document.write(x, " equal ", y)
+            }
+            else {
+                document.write("largest is =>y ", y)
+            }
+        }
+        function charcheck(str) {
+            if (str == "anandu") {
+                document.write("true ", str)
+            }
+            else {
+                document.write("false")
+            }
+        }
+        greater(x, y)
+        charcheck(str)
+        sum=(x,y)=>x+y;
+        mult=()=>{
+            res=30*sum(x,y);
+            document.write("multiplies sum is =>",res)
+        }
+        mult()
+    </script>
+</body>
+
+</html>
