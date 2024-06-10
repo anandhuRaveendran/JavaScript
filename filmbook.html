@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie TIcket</title>
+</head>
+<body>
+  <h3>BOOK YOUR TICKET</h3>  
+  <p></p>
+  <span>Enter Your Name: </span> <input type="text" placeholder="enter your name" id="name"><br>
+  <label>Select Movie : </label> <select id="movie" style="margin-left: 25px;width: 185px;">
+    <option value="Avesham">Avesham</option>
+    <option value="Avengers">Avengers</option>
+    <option value="Spiderman">Spiderman</option>
+    <option value="Hulk">Hulk</option>
+    <option value="Batman">Batman</option>
+</select><br>
+  <label>Select count : </label> <select id="count" style="margin-left: 30px;width: 185px;">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>    
+    <option value="5">5</option>
+</select>
+<button onclick="printMovie()">BUY NOW</button>
+<p>Name of the Person : <span id="person"></span></p>
+<p>Name of the Movie : <span id="moviename"></span></p>
+<p>Number of Tickets : <span id="nooftkt"></span></p>
+
+
+<script>
+function printMovie(){
+let name=document.getElementById("name").value;
+let movie=document.getElementById("movie").value;
+let count=document.getElementById("count").value;
+let ticket={"Name":name,"Movie":movie,"No of Tickets":count}
+console.log(ticket)
+document.getElementById("person").innerHTML=ticket["Name"]
+document.getElementById("moviename").innerHTML=ticket["Movie"]
+
+document.getElementById("nooftkt").innerHTML=ticket["No of Tickets"]
+
+}
+
+</script>
+ 
+</body>
+</html>

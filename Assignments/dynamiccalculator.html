@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .calculator {
+            width: 250px;
+            border: 1px solid #141111;
+            border-radius: 5px;
+            background-color: #474343;
+        }
+
+        .calculator input[type="text"] {
+            width: calc(100% - 10px);
+            height: 45px;
+            margin: 5px 0;
+            font-size: 20px;
+            background-color: rgb(78, 126, 78);
+            text-align: end;
+            padding-right: 10px;
+            border: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .calculator input[type="button"] {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            font-size: 20px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .number {
+            background-color: #ddd;
+        }
+
+        .operator {
+            background-color: rgb(58, 181, 230);
+        }
+
+        .equal {
+            background-color: rgb(230, 58, 67);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <input
+            style="width: 45px;height: 45px;margin: 5px;font-size: 20px; background-color: rgb(78, 126, 78);width: 90%;text-align: end;"
+            type="text" id="result" value="0.0" readonly>
+        <br>
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="7">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="8">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="9">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: rgb(58, 181, 230);"
+            class="operator" type="button" value="/">
+        <br>
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="4">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="5">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="6">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: rgb(58, 181, 230);"
+            class="operator" type="button" value="*">
+        <br>
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="1">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="2">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="3">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: rgb(58, 181, 230);"
+            class="operator" type="button" value="-">
+        <br>
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value="0">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: #ddd;" type="button"
+            value=".">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: rgb(230, 58, 67);"
+            class="operator" type="button" value="=">
+        <input style="width: 45px;height: 45px;margin: 5px;font-size: 20px;background-color: rgb(58, 181, 230);"
+            class="operator" type="button" value="+">
+    </div>
+
+    <script>
+        const resultInput = document.getElementById('result');
+        const buttons = document.querySelectorAll('.calculator input[type="button"]');
+
+        let currentInput = '0';
+        let operator = null;
+        let previousInput = null;
+
+        function updateResult() {
+            resultInput.value = currentInput;
+        }
+
+        function handleNumber(number) {
+            if (currentInput === '0') {
+                currentInput = number;
+            } else {
+                currentInput += number;
+            }
+            updateResult();
+        }
+
+        function handleOperator(op) {
+            if (previousInput === null) {
+                previousInput = currentInput;
+            } else {
+                calculate();
+            }
+            operator = op;
+            currentInput = '0';
+        }
+
+        function calculate() {
+            let result;
+            const prev = parseFloat(previousInput);
+            const curr = parseFloat(currentInput);
+            if (operator === '+') {
+                result = prev + curr;
+            } else if (operator === '-') {
+                result = prev - curr;
+            } else if (operator === '*') {
+                result = prev * curr;
+            } else if (operator === '/') {
+                result = prev / curr;
+            }
+            currentInput = result.toString();
+            previousInput = null;
+            operator = null;
+            updateResult();
+        }
+
+        function handleEqual() {
+            if (operator !== null && previousInput !== null) {
+                calculate();
+            }
+        }
+
+        function handleButtonClick(event) {
+            const value = event.target.value;
+            if (!isNaN(value) || value === '.') {
+                handleNumber(value);
+            } else if (value === '=') {
+                handleEqual();
+            } else {
+                handleOperator(value);
+            }
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', handleButtonClick);
+        });
+
+        updateResult();
+    </script>
+
+</body>
+
+</html>
